@@ -91,7 +91,12 @@ class ffmpegRecipe(ConanFile):
         autotools.install()
         fix_apple_shared_install_name(self)
 
-    def pack(self):
-        autotools = Autotools(self)
-        autotools.install()
-        fix_apple_shared_install_name(self)
+    def package_info(self):
+        self.cpp_info.libs = [
+            "libavcodec",
+            "libavfilter",
+            "libavformat",
+            "libavutil",
+            "libswresample",
+            "libswcale",
+        ]
