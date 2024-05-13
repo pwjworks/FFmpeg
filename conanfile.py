@@ -93,10 +93,10 @@ class ffmpegRecipe(ConanFile):
 
     def package_info(self):
         self.cpp_info.libs = [
-            "libavcodec",
-            "libavfilter",
-            "libavformat",
-            "libavutil",
-            "libswresample",
-            "libswcale",
+            "avcodec",
+            "avfilter",
+            "avformat",
+            "avutil",
+            "swresample",
+            "swscale",
         ]
